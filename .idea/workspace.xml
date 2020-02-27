@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="c45cc68c-632a-4895-9c97-fc50b2f75814" />
+  <component name="ProjectId" id="1YNWP5AecDjdKe2KuJMRlVhdChA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DataVisualization/images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DataVisualization" type="Python.DjangoServer" factoryName="Django server">
+      <module name="DataVisualization" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="DataVisualization.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.conda/envs/DataVisualization/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="0.0.0.0" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="" />
+      <created>1582783504773</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582783504773</updated>
+      <workItem from="1582783528699" duration="4271000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1864" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582785536918">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1864" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.826/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582785536918" />
+    <state width="1878" height="290" key="GridCell.Tab.0.bottom" timestamp="1582786551637">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1440.825/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582786551637" />
+    <state width="1878" height="290" key="GridCell.Tab.0.center" timestamp="1582786551636">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1440.825/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582786551636" />
+    <state width="1878" height="290" key="GridCell.Tab.0.left" timestamp="1582786551635">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1440.825/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582786551635" />
+    <state width="1878" height="290" key="GridCell.Tab.0.right" timestamp="1582786551636">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1440.825/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582786551636" />
+    <state x="1909" y="190" key="SettingsEditor" timestamp="1582783985452">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1909" y="190" key="SettingsEditor/0.23.1440.823/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582783985452" />
+    <state x="2257" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1582783530624">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2257" y="170" key="com.intellij.ide.util.TipDialog/0.23.1440.823/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582783530624" />
+  </component>
+</project>
