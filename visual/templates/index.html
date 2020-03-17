@@ -11,11 +11,6 @@
                 {% block table.thead %}
                     <thead {{ table.attrs.thead.as_html }}>
                         <tr>
-{#                            <th> Serial</th>#}
-{#                            <th> Confirmed Case </th>#}
-{#                            <th> Death Case </th>#}
-{#                            <th> Province </th>#}
-{#                            <th> Country </th>#}
                             <th> Country</th>
                             <th> Province </th>
                             <th> Confirmed Case </th>
@@ -27,11 +22,6 @@
                     {% for observation in observation_list %}
                         {% block table.tbody.row %}
                         <tr {{ row.attrs.as_html }}>
-{#                                <td {{ column.attrs.td.as_html }}>{{ observation.serial_num }}</td>#}
-{#                                <td {{ column.attrs.td.as_html }}>{{ observation.confirmed_case }}</td>#}
-{#                                <td {{ column.attrs.td.as_html }}>{{ observation.death_case }}</td>#}
-{#                                <td {{ column.attrs.td.as_html }}>{{ observation.province_id.name }}</td>#}
-{#                                <td {{ column.attrs.td.as_html }}>{{ observation.country_id.name }}</td>#}
                             {% for k, v in observation.items%}
                                 <td {{ column.attrs.td.as_html }}>{{v}}</td>
                             {% endfor %}
