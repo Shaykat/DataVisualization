@@ -1,0 +1,135 @@
+{% load i18n static %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+    <title>COVID19 STATISTICS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'visual/css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    {% block extrastyle %}
+
+    {% endblock %}
+    {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "visual/css/rtl.css" %}{% endblock %}">{% endif %}
+    {% block extrahead %}{% endblock %}
+
+    {% block responsive %}
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static "visual/css/responsive.css" %}">
+        {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% static "visual/css/responsive_rtl.css" %}">{% endif %}
+    {% endblock %}
+
+    {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE">{% endblock %}
+
+</head>
+
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}" data-admin-utc-offset="{% now "Z" %}">
+    {% load i18n %}
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'visual/css/style.css' %}">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#"> NOVEL COVID 19
+        </a>
+
+        <!-- Links -->
+        <div class="navbar-collapse collapse" id="navb" style="">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Observation List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bar Chart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pie Chart</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    </br>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <!-- Main row -->
+                <div class="row" style="margin-top:50px; margin-left:20px;">
+                    <!-- Left col -->
+                    <section class="col-lg-4 connectedSortable" style="margin-top:20px; margin-left:10px;">
+                        <!-- Custom tabs (Charts with tabs)-->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="tab-content p-0" style="margin-left:20px;">
+                                    {% block content_table %}{% endblock %}
+                                </div>
+                            </div><!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </section>
+
+                    <section class="col-lg-7 connectedSortable" style="margin-top:20px; margin-left:10px;">
+                        <!-- Custom tabs (Charts with tabs)-->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="tab-content p-0">
+                                    <!-- Morris chart - Sales -->
+                                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 350px;">
+                                        {% block content_chart %}{% endblock %}
+                                    </div>
+                                </div>
+                            </div><!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </section>
+                </div>
+
+                <div class="row" style="margin-top:50px; margin-left:20px;">
+                    <!-- Left col -->
+                    <section class="col-lg-5 connectedSortable" style="margin-top:20px; margin-left:10px;">
+                        <!-- Custom tabs (Charts with tabs)-->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="tab-content p-0" style="position: relative; height: 350px; margin-left:10px;">
+                                    {% block content_area_chart %}{% endblock %}
+                                </div>
+                            </div><!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </section>
+
+                    <section class="col-lg-6 connectedSortable" style="margin-top:20px; margin-left:10px;">
+                        <!-- Custom tabs (Charts with tabs)-->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="tab-content p-0">
+                                    <!-- Morris chart - Sales -->
+                                    <div class="chart tab-pane active" style="position: relative; height: 350px;">
+                                        {% block content_line_chart %}{% endblock %}
+                                    </div>
+                                </div>
+                            </div><!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /.content-header -->
+
+</body>
+</html>

@@ -1,22 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="" />
+    <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataVisualization/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base_site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/dataset_prep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/migrations/0002_auto_20200315_1517.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/static/images/logo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/static/visual/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/static/visual/css/responsive_rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/static/visual/css/rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/static/visual/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/templates/covid_chart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/templates/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/templates/import.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataVisualization/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataVisualization/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataVisualization/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataVisualization/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polls/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="c45cc68c-632a-4895-9c97-fc50b2f75814" />
   <component name="ProjectId" id="1YNWP5AecDjdKe2KuJMRlVhdChA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,7 +110,10 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/visual/static/visual/css" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -35,7 +123,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/visual/static/visual/css" />
+      <recent name="$PROJECT_DIR$/visual/templates" />
+      <recent name="$PROJECT_DIR$/visual/static/images" />
+      <recent name="$PROJECT_DIR$/visual/static/visual" />
+      <recent name="$PROJECT_DIR$/polls/static/polls/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/visual" />
+      <recent name="$PROJECT_DIR$/visual/static/visual/css" />
+      <recent name="$PROJECT_DIR$/visual/static/visual" />
       <recent name="$PROJECT_DIR$/DataVisualization/images" />
     </key>
   </component>
@@ -55,7 +153,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
-      <option name="host" value="0.0.0.0" />
+      <option name="host" value="127.0.0.1" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
@@ -87,41 +185,181 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582783504773</updated>
-      <workItem from="1582783528699" duration="4271000" />
+      <workItem from="1582783528699" duration="4558000" />
+      <workItem from="1582793127538" duration="1989000" />
+      <workItem from="1582836977672" duration="4171000" />
+      <workItem from="1584174396116" duration="6893000" />
+      <workItem from="1584183224035" duration="457000" />
+      <workItem from="1584275150439" duration="2404000" />
+      <workItem from="1584277727527" duration="2000" />
+      <workItem from="1584282578614" duration="3721000" />
+      <workItem from="1584361333974" duration="4276000" />
+      <workItem from="1584365811249" duration="19579000" />
+      <workItem from="1584426058879" duration="10748000" />
     </task>
+    <task id="LOCAL-00001" summary="[Polls] Add index view and template">
+      <created>1582794506020</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582794506020</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[Polls] Add index view and template" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Polls] Add index view and template" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1864" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582785536918">
+    <state x="1864" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584365858002">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state x="318" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.821/1440.23.1920.1057@0.23.1440.821" timestamp="1584277690715" />
+    <state x="1864" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584365858002" />
     <state x="1864" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.826/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582785536918" />
-    <state width="1878" height="290" key="GridCell.Tab.0.bottom" timestamp="1582786551637">
+    <state x="1864" y="201" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/1440.23.1920.988@1440.23.1920.988" timestamp="1582793148971" />
+    <state x="2088" y="286" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584365793502">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state x="2088" y="286" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584365793502" />
+    <state x="1931" y="449" key="#xdebugger.evaluate" timestamp="1584418360692">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1931" y="449" key="#xdebugger.evaluate/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584418360691" />
+    <state x="1964" y="119" key="CommitChangelistDialog2" timestamp="1582794505858">
+      <screen x="1440" y="23" width="1920" height="988" />
+    </state>
+    <state x="1964" y="119" key="CommitChangelistDialog2/0.23.1440.877/1440.23.1920.988@1440.23.1920.988" timestamp="1582794505857" />
+    <state width="1878" height="160" key="GridCell.Tab.0.bottom" timestamp="1584464169496">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1398" height="280" key="GridCell.Tab.0.bottom/0.23.1440.821/1440.23.1920.1057@0.23.1440.821" timestamp="1584277710145" />
+    <state width="1878" height="160" key="GridCell.Tab.0.bottom/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584429771959" />
+    <state width="1398" height="280" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1584183200118" />
+    <state width="1878" height="160" key="GridCell.Tab.0.bottom/0.23.1440.822/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584464169496" />
+    <state width="1398" height="280" key="GridCell.Tab.0.bottom/0.23.1440.822@0.23.1440.822" timestamp="1584182488081" />
+    <state width="1398" height="212" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1582837220092" />
     <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1440.825/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582786551637" />
-    <state width="1878" height="290" key="GridCell.Tab.0.center" timestamp="1582786551636">
+    <state width="1878" height="267" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.988@1440.23.1920.988" timestamp="1582798357641" />
+    <state width="1878" height="160" key="GridCell.Tab.0.center" timestamp="1584464169495">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state width="1398" height="280" key="GridCell.Tab.0.center/0.23.1440.821/1440.23.1920.1057@0.23.1440.821" timestamp="1584277710143" />
+    <state width="1878" height="160" key="GridCell.Tab.0.center/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584429771958" />
+    <state width="1398" height="280" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1584183200116" />
+    <state width="1878" height="160" key="GridCell.Tab.0.center/0.23.1440.822/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584464169495" />
+    <state width="1398" height="280" key="GridCell.Tab.0.center/0.23.1440.822@0.23.1440.822" timestamp="1584182488079" />
+    <state width="1398" height="212" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1582837220092" />
     <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1440.825/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582786551636" />
-    <state width="1878" height="290" key="GridCell.Tab.0.left" timestamp="1582786551635">
+    <state width="1878" height="267" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.988@1440.23.1920.988" timestamp="1582798357640" />
+    <state width="1878" height="160" key="GridCell.Tab.0.left" timestamp="1584464169494">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state width="1398" height="280" key="GridCell.Tab.0.left/0.23.1440.821/1440.23.1920.1057@0.23.1440.821" timestamp="1584277710142" />
+    <state width="1878" height="160" key="GridCell.Tab.0.left/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584429771958" />
+    <state width="1398" height="280" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1584183200114" />
+    <state width="1878" height="160" key="GridCell.Tab.0.left/0.23.1440.822/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584464169494" />
+    <state width="1398" height="280" key="GridCell.Tab.0.left/0.23.1440.822@0.23.1440.822" timestamp="1584182488078" />
+    <state width="1398" height="212" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1582837220091" />
     <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1440.825/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582786551635" />
-    <state width="1878" height="290" key="GridCell.Tab.0.right" timestamp="1582786551636">
+    <state width="1878" height="267" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.988@1440.23.1920.988" timestamp="1582798357639" />
+    <state width="1878" height="160" key="GridCell.Tab.0.right" timestamp="1584464169496">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state width="1398" height="280" key="GridCell.Tab.0.right/0.23.1440.821/1440.23.1920.1057@0.23.1440.821" timestamp="1584277710144" />
+    <state width="1878" height="160" key="GridCell.Tab.0.right/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584429771959" />
+    <state width="1398" height="280" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1584183200117" />
+    <state width="1878" height="160" key="GridCell.Tab.0.right/0.23.1440.822/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584464169496" />
+    <state width="1398" height="280" key="GridCell.Tab.0.right/0.23.1440.822@0.23.1440.822" timestamp="1584182488080" />
+    <state width="1398" height="212" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1582837220092" />
     <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1440.825/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582786551636" />
-    <state x="1909" y="190" key="SettingsEditor" timestamp="1582783985452">
+    <state width="1878" height="267" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.988@1440.23.1920.988" timestamp="1582798357640" />
+    <state width="1878" height="356" key="GridCell.Tab.1.bottom" timestamp="1584424938693">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state width="1878" height="356" key="GridCell.Tab.1.bottom/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584424938693" />
+    <state width="1398" height="263" key="GridCell.Tab.1.bottom/0.23.1440.822@0.23.1440.822" timestamp="1583047585636" />
+    <state width="1878" height="356" key="GridCell.Tab.1.center" timestamp="1584424938693">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="356" key="GridCell.Tab.1.center/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584424938693" />
+    <state width="1398" height="263" key="GridCell.Tab.1.center/0.23.1440.822@0.23.1440.822" timestamp="1583047585635" />
+    <state width="1878" height="356" key="GridCell.Tab.1.left" timestamp="1584424938693">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="356" key="GridCell.Tab.1.left/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584424938693" />
+    <state width="1398" height="263" key="GridCell.Tab.1.left/0.23.1440.822@0.23.1440.822" timestamp="1583047585635" />
+    <state width="1878" height="356" key="GridCell.Tab.1.right" timestamp="1584424938693">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="356" key="GridCell.Tab.1.right/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584424938693" />
+    <state width="1398" height="263" key="GridCell.Tab.1.right/0.23.1440.822@0.23.1440.822" timestamp="1583047585635" />
+    <state width="234" height="457" key="HiddenNamespacesPopup" timestamp="1584365866976">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="234" height="457" key="HiddenNamespacesPopup/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584365866975" />
+    <state x="1909" y="190" key="SettingsEditor" timestamp="1584434900857">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1909" y="190" key="SettingsEditor/0.23.1440.822/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584434900857" />
     <state x="1909" y="190" key="SettingsEditor/0.23.1440.823/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582783985452" />
-    <state x="2257" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1582783530624">
+    <state x="2000" y="245" key="Vcs.Push.Dialog.v2" timestamp="1582794508749">
+      <screen x="1440" y="23" width="1920" height="988" />
+    </state>
+    <state x="2000" y="245" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.23.1920.988@1440.23.1920.988" timestamp="1582794508749" />
+    <state x="2257" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1584365817545">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state x="613" y="137" key="com.intellij.ide.util.TipDialog/0.23.1440.821/1440.23.1920.1057@0.23.1440.821" timestamp="1584275151350" />
+    <state x="2257" y="170" key="com.intellij.ide.util.TipDialog/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584365817545" />
+    <state x="613" y="137" key="com.intellij.ide.util.TipDialog/0.23.1440.821@0.23.1440.821" timestamp="1584183224149" />
     <state x="2257" y="170" key="com.intellij.ide.util.TipDialog/0.23.1440.823/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582783530624" />
+    <state x="613" y="137" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1582837014742" />
+    <state x="2189" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582793248361">
+      <screen x="1440" y="23" width="1920" height="988" />
+    </state>
+    <state x="2189" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/1440.23.1920.988@1440.23.1920.988" timestamp="1582793248361" />
+    <state x="2065" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1584429652915">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2065" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1440.821/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584429652915" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visual/views.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visual/views.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visual/views.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
