@@ -94,10 +94,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="JupyterTrust" id="c45cc68c-632a-4895-9c97-fc50b2f75814" />
   <component name="ProjectId" id="1YNWP5AecDjdKe2KuJMRlVhdChA" />
@@ -332,10 +333,15 @@
     <state x="613" y="137" key="com.intellij.ide.util.TipDialog/0.23.1440.821@0.23.1440.821" timestamp="1584183224149" />
     <state x="2257" y="170" key="com.intellij.ide.util.TipDialog/0.23.1440.823/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582783530624" />
     <state x="613" y="137" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1582837014742" />
-    <state x="2189" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582793248361">
-      <screen x="1440" y="23" width="1920" height="988" />
+    <state x="2189" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584489584836">
+      <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state x="2189" y="470" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.822/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584489584836" />
     <state x="2189" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/1440.23.1920.988@1440.23.1920.988" timestamp="1582793248361" />
+    <state x="2020" y="406" key="git4idea.ui.GitUnstashDialog" timestamp="1584489658510">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2020" y="406" key="git4idea.ui.GitUnstashDialog/0.23.1440.822/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584489658510" />
     <state x="2065" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1584429652915">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
