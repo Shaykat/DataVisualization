@@ -1,26 +1,45 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
-from django.urls import reverse
 from django.views import generic
-from django.db.models import Sum
-from django.http import JsonResponse
-from tablib import Dataset
+from django.db.models import Sum, Q
+from django.http import JsonResponse, HttpResponse
+from django.template import loader
 from .models import Country, Province, CovidObservation
 
 
-class IndexView(generic.ListView):
-    template_name = './index.html'
+# class IndexView(generic.ListView):
+#     template_name = './index.html'
+#     context_object_name = 'observation_list'
+#
+#     def get_queryset(self):
+#         """Return the last five published observation."""
+#         search_query = ""
+#         if self.request.method == 'GET':
+#             search_query = self.request.GET.get('country', None)
+#
+#         queryset = CovidObservation.objects.values('country_id__name', 'province_id__name').annotate(
+#             Province_confirmed_case=Sum('confirmed_case'),
+#             Province_death_case=Sum('death_case')).order_by('-Province_confirmed_case')
+#
+#         # return CovidObservation.objects.order_by('-observation_date')[:5]
+#         return queryset
+
+
+def index(request):
+    template = loader.get_template('./index.html')
     context_object_name = 'observation_list'
+    search_query = ""
 
-    def get_queryset(self):
-        """Return the last five published observation."""
-        queryset = CovidObservation.objects.values('country_id__name', 'province_id__name').annotate(Province_confirmed_case=Sum('confirmed_case')).order_by('-Province_confirmed_case')
-        # for entry in queryset:
-        #     labels.append(entry['country_id__name'])
-        #     data.append(entry['country_confirmed_case'])
+    if request.method == 'GET':
+        search_query = request.GET.get('country', None)
 
-        # return CovidObservation.objects.order_by('-observation_date')[:5]
-        return queryset
+    queryset = CovidObservation.objects.values('country_id__name', 'province_id__name').annotate(
+        Province_confirmed_case=Sum('confirmed_case'),
+        Province_death_case=Sum('death_case')).filter(country_id__name=search_query).order_by('-Province_confirmed_case')
+
+    context = {
+        context_object_name: queryset
+    }
+
+    return HttpResponse(template.render(context, request))
 
 
 class DetailView(generic.DetailView):
@@ -31,9 +50,15 @@ class DetailView(generic.DetailView):
 def covid_chart(request):
     labels = []
     data = []
+    search_query = ""
+    if request.method == 'GET':
+        search_query = request.GET.get('country', None)
 
-    queryset = CovidObservation.objects.values('country_id__name', 'province_id__name').annotate(Province_confirmed_case=Sum('confirmed_case')).order_by('-Province_confirmed_case')
-    for entry in queryset:
+    queryset = CovidObservation.objects.values('country_id__name', 'province_id__name').annotate(
+        Province_confirmed_case=Sum('confirmed_case'))
+    if search_query:
+        queryset = queryset.filter(country_id__name=search_query)
+    for entry in queryset.order_by('-Province_confirmed_case')[:10]:
         labels.append(entry['province_id__name'])
         data.append(entry['Province_confirmed_case'])
 
@@ -43,35 +68,22 @@ def covid_chart(request):
     })
 
 
-def covid_bubble_chart(request):
-    label_x = []
-    label_y = []
+def covid_line_chart(request):
+    labels = []
     data = []
 
-    queryset = CovidObservation.objects.values('country_id__name', 'province_id__name').annotate(Province_confirmed_case=Sum('confirmed_case')).order_by('-Province_confirmed_case')
+    search_query = ""
+    if request.method == 'GET':
+        search_query = request.GET.get('country', None)
+
+    queryset = CovidObservation.objects.values('country_id__name').annotate(
+        Country_death_case=Sum('death_case')).order_by('-Country_death_case')[:5]
     for entry in queryset:
-        label_x.append(entry['country_id__name'])
-        label_y.append(entry['province_id__name'])
-        data.append(entry['Province_confirmed_case'])
+        labels.append(entry['country_id__name'])
+        data.append(entry['Country_death_case'])
 
     return JsonResponse(data={
-        'label_x': label_x,
-        'label_y': label_y,
+        'labels': labels,
         'data': data,
     })
-
-
-# def simple_upload(request):
-#     if request.method == 'POST':
-#         covid_resource = CovidResource()
-#         dataset = Dataset()
-#         new_persons = request.FILES['myfile']
-#
-#         imported_data = dataset.load(new_persons.read())
-#         result = covid_resource.import_data(dataset, dry_run=True)  # Test the data import
-#
-#         if not result.has_errors():
-#             covid_resource.import_data(dataset, dry_run=False)  # Actually import now
-#
-#     return render(request, './index.html')
 

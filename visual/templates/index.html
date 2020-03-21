@@ -5,20 +5,17 @@
 {% if observation_list %}
 
     <!-- Content -->
-    <div class="table-container">
+    <div class="table-container" style="overflow:auto;">
         {% block table %}
+            <h2> COVID19 Confirmed Cases</h2>
             <table>
                 {% block table.thead %}
                     <thead {{ table.attrs.thead.as_html }}>
                         <tr>
-{#                            <th> Serial</th>#}
-{#                            <th> Confirmed Case </th>#}
-{#                            <th> Death Case </th>#}
-{#                            <th> Province </th>#}
-{#                            <th> Country </th>#}
                             <th> Country</th>
                             <th> Province </th>
                             <th> Confirmed Case </th>
+                            <th> Death Case </th>
                         </tr>
                     </thead>
                 {% endblock table.thead %}
@@ -27,11 +24,6 @@
                     {% for observation in observation_list %}
                         {% block table.tbody.row %}
                         <tr {{ row.attrs.as_html }}>
-{#                                <td {{ column.attrs.td.as_html }}>{{ observation.serial_num }}</td>#}
-{#                                <td {{ column.attrs.td.as_html }}>{{ observation.confirmed_case }}</td>#}
-{#                                <td {{ column.attrs.td.as_html }}>{{ observation.death_case }}</td>#}
-{#                                <td {{ column.attrs.td.as_html }}>{{ observation.province_id.name }}</td>#}
-{#                                <td {{ column.attrs.td.as_html }}>{{ observation.country_id.name }}</td>#}
                             {% for k, v in observation.items%}
                                 <td {{ column.attrs.td.as_html }}>{{v}}</td>
                             {% endfor %}
@@ -62,11 +54,18 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script>
 
-        $(function () {
+        $('#search_form').submit(function(e) {
+            e.preventDefault();
+            var country = $("#country").val();
+            console.log(country);
+            url_str = "http://127.0.0.1:8000/visual/covid_chart/?country=" + country;
+            console.log(url_str);
+            var covidChart = $("#covid_chart"); {#Get the bar chart canvas id#}
+            var covidAreaChart = $("#covid_area_chart"); {#Get the Area Chart canvas id#}
 
-            var covidChart = $("#covid_chart");
+            {# Call The Ajax for bar chart#}
             $.ajax({
-                url : "http://127.0.0.1:8000/visual/covid_chart/",
+                url : url_str,
                 success: function (data) {
                     var ctx = covidChart[0].getContext("2d");
 
@@ -76,7 +75,76 @@
                             labels: data.labels,
                             datasets: [{
                             label: 'Covid Confirmed Case',
-                            backgroundColor: ['orange', 'blue', 'green'],
+                            backgroundColor: ['orange', 'blue', 'green', 'red', 'violet', 'purple'],
+                            data: data.data
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                                legend: {
+                                    position: 'top',
+                                },
+                            title: {
+                                display: true,
+                                text: 'COVID19 Confirmed Case Bar Chart'
+                            }
+                        }
+                    });
+                }
+            });
+
+            {# Call The Ajax for Area chart #}
+            $.ajax({
+                url : url_str,
+                success: function (data) {
+                    var ctx = covidAreaChart[0].getContext("2d");
+
+                    new Chart(ctx, {
+                        type: 'polarArea',
+                        data: {
+                            labels: data.labels,
+                            datasets: [{
+                                label: 'Covid Confirmed Case',
+                                fill: false,
+                                backgroundColor: ['orange', 'blue', 'green', 'red', 'violet', 'purple'],
+                                data: data.data
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'COVID19 Confirmed Case Polar Area Chart'
+                            },
+                        }
+                    });
+                }
+            });
+        });
+
+
+        $(function () {
+            var covidChart = $("#covid_chart");
+            var country = "";
+            $('#search_form').submit(function() {
+                country = $("#country").val();
+            });
+            $.ajax({
+                url : "http://127.0.0.1:8000/visual/covid_chart/",
+                success: function (data) {
+                    var ctx = covidChart[0].getContext("2d");
+
+                    window.myObjBar = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: data.labels,
+                            country: country,
+                            datasets: [{
+                            label: 'Covid Confirmed Case',
+                            backgroundColor: ['orange', 'blue', 'green', 'red', 'violet', 'purple'],
                             data: data.data
                             }]
                         },
@@ -110,9 +178,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script>
-
         $(function () {
-
             var covidAreaChart = $("#covid_area_chart");
             $.ajax({
                 url : "http://127.0.0.1:8000/visual/covid_chart/",
@@ -126,7 +192,7 @@
                             datasets: [{
                                 label: 'Covid Confirmed Case',
                                 fill: false,
-                                backgroundColor: ['green', 'blue', 'orange'],
+                                backgroundColor: ['orange', 'blue', 'green', 'red', 'violet', 'purple'],
                                 data: data.data
                             }]
                         },
@@ -162,10 +228,9 @@
     <script>
 
         $(function () {
-
             var covidLineChart = $("#covid_line_chart");
             $.ajax({
-                url : "http://127.0.0.1:8000/visual/covid_chart/",
+                url : "http://127.0.0.1:8000/visual/covid_line_chart/",
                 success: function (data) {
                     var ctx = covidLineChart[0].getContext("2d");
 
@@ -174,9 +239,9 @@
                         data: {
                             labels: data.labels,
                             datasets: [{
-                                label: 'Covid Confirmed Case',
+                                label: 'Covid Death Case',
                                 fill: false,
-                                backgroundColor: ['green', 'blue', 'orange'],
+                                backgroundColor: ['orange', 'blue', 'green', 'red', 'violet', 'purple'],
                                 data: data.data
                             }]
                         },
@@ -187,7 +252,7 @@
                             },
                             title: {
                                 display: true,
-                                text: 'COVID19 Confirmed Case Polar Area Chart'
+                                text: 'COVID19 Death Case Line Chart'
                             },
                         }
                     });
