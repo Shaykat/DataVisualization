@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if observation_list %}
+
+    <!-- Content -->
+    <div class="table-container">
+        {% block table %}
+            <h2> COVID19 all Cases</h2>
+            <table>
+                {% block table.thead %}
+                    <thead {{ table.attrs.thead.as_html }}>
+                        <tr>
+                            <th> Country</th>
+                            <th> Province </th>
+                            <th> Confirmed Case </th>
+                            <th> Death Case </th>
+                        </tr>
+                    </thead>
+                {% endblock table.thead %}
+                {% block table.tbody %}
+                    <tbody {{ table.attrs.tbody.as_html }}>
+                    {% for observation in observation_list %}
+                        {% block table.tbody.row %}
+                        <tr {{ row.attrs.as_html }}>
+                            {% for k, v in observation.items%}
+                                <td {{ column.attrs.td.as_html }}>{{v}}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endblock table.tbody.row %}
+                    {% endfor %}
+                    </tbody>
+                {% endblock table.tbody %}
+            </table>
+        {% endblock table %}
+    </div>
+
+
+{% else %}
+    <p>No observations are available.</p>
+{% endif %}
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script>
+  </script>
+
+{% endblock %}

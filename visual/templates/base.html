@@ -43,18 +43,18 @@
         <div class="navbar-collapse collapse" id="navb" style="">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Observation List</a>
+                    <a class="nav-link" href="/admin">Administration</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Bar Chart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pie Chart</a>
-                </li>
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">Bar Chart</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">Pie Chart</a>#}
+{#                </li>#}
             </ul>
 
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <form class="form-inline my-2 my-lg-0" method='get' action="" id="search_form">
+                <input class="form-control mr-sm-2" type="text" name="country" placeholder="Search" id="country">
                 <button class="btn btn-success" type="submit">Search</button>
             </form>
         </div>
@@ -62,74 +62,87 @@
 
     </br>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <section class="content">
-            <div class="container-fluid">
-                <!-- Main row -->
-                <div class="row" style="margin-top:50px; margin-left:20px;">
-                    <!-- Left col -->
-                    <section class="col-lg-4 connectedSortable" style="margin-top:20px; margin-left:10px;">
-                        <!-- Custom tabs (Charts with tabs)-->
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="tab-content p-0" style="margin-left:20px;">
-                                    {% block content_table %}{% endblock %}
-                                </div>
-                            </div><!-- /.card-body -->
-                        </div>
-                        <!-- /.card -->
-                    </section>
+    {% block content %}
 
-                    <section class="col-lg-7 connectedSortable" style="margin-top:20px; margin-left:10px;">
-                        <!-- Custom tabs (Charts with tabs)-->
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="tab-content p-0">
-                                    <!-- Morris chart - Sales -->
-                                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 350px;">
-                                        {% block content_chart %}{% endblock %}
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <section class="content">
+                <div class="container-fluid">
+                    <!-- Main row -->
+                    <div class="row" style="margin-top:50px; margin-left:20px;">
+                        <!-- Left col -->
+                        <section class="col-lg-4 connectedSortable" style="margin-top:20px; margin-left:10px;">
+                            <!-- Custom tabs (Charts with tabs)-->
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tab-content p-0" style="margin-left:10px;">
+                                        {% block content_table %}{% endblock %}
                                     </div>
-                                </div>
-                            </div><!-- /.card-body -->
-                        </div>
-                        <!-- /.card -->
-                    </section>
-                </div>
+                                </div><!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </section>
 
-                <div class="row" style="margin-top:50px; margin-left:20px;">
-                    <!-- Left col -->
-                    <section class="col-lg-5 connectedSortable" style="margin-top:20px; margin-left:10px;">
-                        <!-- Custom tabs (Charts with tabs)-->
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="tab-content p-0" style="position: relative; height: 350px; margin-left:10px;">
-                                    {% block content_area_chart %}{% endblock %}
-                                </div>
-                            </div><!-- /.card-body -->
-                        </div>
-                        <!-- /.card -->
-                    </section>
-
-                    <section class="col-lg-6 connectedSortable" style="margin-top:20px; margin-left:10px;">
-                        <!-- Custom tabs (Charts with tabs)-->
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="tab-content p-0">
-                                    <!-- Morris chart - Sales -->
-                                    <div class="chart tab-pane active" style="position: relative; height: 350px;">
-                                        {% block content_line_chart %}{% endblock %}
+                        <section class="col-lg-7 connectedSortable" style="margin-top:20px; margin-left:10px;">
+                            <!-- Custom tabs (Charts with tabs)-->
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tab-content p-0">
+                                        <!-- Morris chart - Sales -->
+                                        <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 500px;">
+                                            {% block content_chart %}{% endblock %}
+                                        </div>
                                     </div>
-                                </div>
-                            </div><!-- /.card-body -->
-                        </div>
-                        <!-- /.card -->
-                    </section>
+                                </div><!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </section>
+                    </div>
+
+                    <div class="row" style="margin-top:50px; margin-left:20px;">
+                        <!-- Left col -->
+                        <section class="col-lg-5 connectedSortable" style="margin-top:20px; margin-left:10px;">
+                            <!-- Custom tabs (Charts with tabs)-->
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tab-content p-0" style="position: relative; height: 350px; margin-left:10px;">
+                                        {% block content_area_chart %}{% endblock %}
+                                    </div>
+                                </div><!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </section>
+
+                        <section class="col-lg-6 connectedSortable" style="margin-top:20px; margin-left:10px;">
+                            <!-- Custom tabs (Charts with tabs)-->
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tab-content p-0">
+                                        <!-- Morris chart - Sales -->
+                                        <div class="chart tab-pane active" style="position: relative; height: 350px;">
+                                            {% block content_line_chart %}{% endblock %}
+                                        </div>
+                                    </div>
+                                </div><!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </section>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </section>
+            </br>
+            </br>
+        </div>
+    {% endblock %}
+
     <!-- /.content-header -->
+{#    <footer class="page-footer font-small blue pt-4" style="bottom: 0; width: 98%; position:fixed; background-color: #999999">#}
+    <footer class="page-footer font-small teal pt-4" style="bottom: 0; width: 98%; position: fixed">
+        <strong>Copyright &copy; <a href="http://github.com/Shaykat">Shaykat.com</a>.</strong> All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+          <b>Version</b> 1.0.1
+        </div>
+    </footer>
 
 </body>
 </html>
