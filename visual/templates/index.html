@@ -1,265 +1,151 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content_table %}
-{% if observation_list %}
-
-    <!-- Content -->
-    <div class="table-container" style="overflow:auto;">
-        {% block table %}
-            <h2> COVID19 Confirmed Cases</h2>
-            <table>
-                {% block table.thead %}
-                    <thead {{ table.attrs.thead.as_html }}>
-                        <tr>
-                            <th> Country</th>
-                            <th> Province </th>
-                            <th> Confirmed Case </th>
-                            <th> Death Case </th>
-                        </tr>
-                    </thead>
-                {% endblock table.thead %}
-                {% block table.tbody %}
-                    <tbody {{ table.attrs.tbody.as_html }}>
-                    {% for observation in observation_list %}
-                        {% block table.tbody.row %}
-                        <tr {{ row.attrs.as_html }}>
-                            {% for k, v in observation.items%}
-                                <td {{ column.attrs.td.as_html }}>{{v}}</td>
-                            {% endfor %}
-                        </tr>
-                        {% endblock table.tbody.row %}
-                    {% endfor %}
-                    </tbody>
-                {% endblock table.tbody %}
-            </table>
-        {% endblock table %}
-    </div>
-
-
-{% else %}
-    <p>No observations are available.</p>
-{% endif %}
-{%  endblock %}
-
 
 {% block content_chart %}
+    <link rel="stylesheet" type="text/css" href="{% static 'visual/css/slider.css' %}">
+    <div class = "upperLeft" style="text-align:center;flex-basis:55%; background-color: #ebedff; margin-left: 20px">
+        <div class="slideshow-container" style=" margin-bottom: -15px;">
+            <div class="mySlides fade">
+                <img src="{% static 'visual/images/1.jpg' %}" style="width:100%; height: 530px;">
+            </div>
 
-    <div class="chart-container" style="position: relative; height:25vh; width:50vw">
-    {#    <canvas id="covid_chart" data-url="{% url 'covid_chart' %}"></canvas>#}
-    <canvas id="covid_chart" data-url=""></canvas>
+            <div class="mySlides fade">
+                <img src="{% static 'visual/images/2.png' %}" style="width:100%; height: 530px;">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="{% static 'visual/images/3.jpg' %}" style="width:100%; height: 530px;">
+            </div>
+        </div> <!-- slideshow-container -->
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+    </div> <!-- upperLeft -->
+
+    <div class = "upperRight" style="text-align:center;flex-basis:40%; background-color: #ebedff; margin-left: 50px">
+        <h4 style="font-family: 'Poppins', sans-serif;font-weight:700;font-size:25px; text-align: center;">Most Frequent Words About COVID-19</h4>
+        <div id="chartdiv"></div>
+
+
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+        <script>
+            am4core.ready(function() {
+
+            // Themes begin
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+
+
+            var chart = am4core.create("chartdiv", am4plugins_wordCloud.WordCloud);
+            var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
+
+            series.accuracy = 4;
+            series.step = 15;
+            series.rotationThreshold = 0.7;
+            series.maxCount = 200;
+            series.minWordLength = 2;
+            series.labels.template.margin(4,4,4,4);
+            series.maxFontSize = am4core.percent(30);
+
+            series.text = "In recent weeks, Covid-19 has rapidly spread throughout New York City. The obstetrical population presents a unique challenge during this pandemic, since these patients have multiple interactions with the health care system and eventually most are admitted to the hospital for delivery. We first diagnosed a case of Covid-19 in an obstetrical patient on March 13, 2020, and we previously reported our early experience with Covid-19 in pregnant women, including two initially asymptomatic women in whom symptoms developed and who tested positive for SARS-CoV-2, the virus that causes Covid-19, after delivery.1,2 After these two cases were identified, we implemented universal testing with nasopharyngeal swabs and a quantitative polymerase-chain-reaction test to detect SARS-CoV-2 infection in women who were admitted for delivery. Between March 22 and April 4, 2020, a total of 215 pregnant women delivered infants at the New York–Presbyterian Allen Hospital and Columbia University Irving Medical Center . All the women were screened on admission for symptoms of Covid-19. Four women (1.9%) had fever or other symptoms of Covid-19 on admission, and all 4 women tested positive for SARS-CoV-2 (Figure 1). Of the 211 women without symptoms, all were afebrile on admission. Nasopharyngeal swabs were obtained from 210 of the 211 women (99.5%) who did not have symptoms of Covid-19; of these women, 29 (13.7%) were positive for SARS-CoV-2. Thus, 29 of the 33 patients who were positive for SARS-CoV-2 at admission (87.9%) had no symptoms of Covid-19 at presentation.";
+
+            series.colors = new am4core.ColorSet();
+            series.colors.passOptions = {}; // makes it loop
+
+            //series.labelsContainer.rotation = 45;
+            series.angles = [0,-90];
+            series.fontWeight = "700"
+
+            setInterval(function () {
+              series.dataItems.getIndex(Math.round(Math.random() * (series.dataItems.length - 1))).setValue("value", Math.round(Math.random() * 10));
+             }, 10000)
+
+            }); // end am4core.ready()
+            </script>
+    </div> <!-- upperRight -->
+
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 1500); // Change image every 2 seconds
+        }
+    </script>
+{% endblock %}
+
+
+{% block content_table %}
+    <div class="table-container" id="table-container" style="overflow:auto; height: 400px">
+        {% if observation_list %}
+            <!-- Content -->
+            {% block table %}
+                <h2 style="text-align: center; margin-right: 100px; color: #07B08E"> COVID-19 ALL CASES</h2>
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <table id="dtVerticalScrollExample" class="table" cellspacing="0" width="100%" style="overflow-y: auto">
+                        <thead {{ table.attrs.thead.as_html }} style="background-color: #EBECFF">
+                            <tr>
+                                <th> Country</th>
+                                <th> Observation Date</th>
+                                <th> Confirmed Case</th>
+                                <th> Death Case</th>
+                                <th> Recovered Case</th>
+                            </tr>
+                        </thead>
+
+                        <tbody {{ table.attrs.tbody.as_html }}>
+                        {% for observation in observation_list %}
+                            <tr {{ row.attrs.as_html }}>
+                                {% for k, v in observation.items %}
+                                    <td {{ column.attrs.td.as_html }}>{{ v }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% endblock table %}
+
+        {% else %}
+            <p>No observations are available.</p>
+        {% endif %}
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
     <script>
-
-        $('#search_form').submit(function(e) {
-            e.preventDefault();
-            var country = $("#country").val();
-            console.log(country);
-            url_str = "http://127.0.0.1:8000/visual/covid_chart/?country=" + country;
-            console.log(url_str);
-            var covidChart = $("#covid_chart"); {#Get the bar chart canvas id#}
-            var covidAreaChart = $("#covid_area_chart"); {#Get the Area Chart canvas id#}
-
-            {# Call The Ajax for bar chart#}
-            $.ajax({
-                url : url_str,
-                success: function (data) {
-                    var ctx = covidChart[0].getContext("2d");
-
-                    window.myObjBar = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: data.labels,
-                            datasets: [{
-                            label: 'Covid Confirmed Case',
-                            backgroundColor: ['orange', 'blue', 'green', 'red', 'violet', 'purple'],
-                            data: data.data
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                                legend: {
-                                    position: 'top',
-                                },
-                            title: {
-                                display: true,
-                                text: 'COVID19 Confirmed Case Bar Chart'
-                            }
-                        }
-                    });
-                }
+        $(document).ready(function () {
+            $('#dtVerticalScrollExample').DataTable({
+                "scrollY": "200px",
+                "scrollCollapse": true,
             });
-
-            {# Call The Ajax for Area chart #}
-            $.ajax({
-                url : url_str,
-                success: function (data) {
-                    var ctx = covidAreaChart[0].getContext("2d");
-
-                    new Chart(ctx, {
-                        type: 'polarArea',
-                        data: {
-                            labels: data.labels,
-                            datasets: [{
-                                label: 'Covid Confirmed Case',
-                                fill: false,
-                                backgroundColor: ['orange', 'blue', 'green', 'red', 'violet', 'purple'],
-                                data: data.data
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            legend: {
-                                position: 'top',
-                            },
-                            title: {
-                                display: true,
-                                text: 'COVID19 Confirmed Case Polar Area Chart'
-                            },
-                        }
-                    });
-                }
-            });
+            $('.dataTables_length').addClass('bs-select');
         });
-
-
-        $(function () {
-            var covidChart = $("#covid_chart");
-            var country = "";
-            $('#search_form').submit(function() {
-                country = $("#country").val();
-            });
-            $.ajax({
-                url : "http://127.0.0.1:8000/visual/covid_chart/",
-                success: function (data) {
-                    var ctx = covidChart[0].getContext("2d");
-
-                    window.myObjBar = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: data.labels,
-                            country: country,
-                            datasets: [{
-                            label: 'Covid Confirmed Case',
-                            backgroundColor: ['orange', 'blue', 'green', 'red', 'violet', 'purple'],
-                            data: data.data
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                                legend: {
-                                    position: 'top',
-                                },
-                            title: {
-                                display: true,
-                                text: 'COVID19 Confirmed Case Bar Chart'
-                            }
-                        }
-                    });
-                }
-            });
-
-        });
-
     </script>
 
-{% endblock %}
-
-{% block content_area_chart %}
-
-    <div class="chart-container" style="position: relative; height:25vh; width:35vw">
-    {#    <canvas id="covid_chart" data-url="{% url 'covid_chart' %}"></canvas>#}
-    <canvas id="covid_area_chart" data-url=""></canvas>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-    <script>
-        $(function () {
-            var covidAreaChart = $("#covid_area_chart");
-            $.ajax({
-                url : "http://127.0.0.1:8000/visual/covid_chart/",
-                success: function (data) {
-                    var ctx = covidAreaChart[0].getContext("2d");
-
-                    new Chart(ctx, {
-                        type: 'polarArea',
-                        data: {
-                            labels: data.labels,
-                            datasets: [{
-                                label: 'Covid Confirmed Case',
-                                fill: false,
-                                backgroundColor: ['orange', 'blue', 'green', 'red', 'violet', 'purple'],
-                                data: data.data
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            legend: {
-                                position: 'top',
-                            },
-                            title: {
-                                display: true,
-                                text: 'COVID19 Confirmed Case Polar Area Chart'
-                            },
-                        }
-                    });
-                }
-            });
-        });
-
-    </script>
-
-{% endblock %}
-
-
-{% block content_line_chart %}
-
-    <div class="chart-container" style="position: relative; height:25vh; width:35vw">
-    {#    <canvas id="covid_chart" data-url="{% url 'covid_chart' %}"></canvas>#}
-        <canvas id="covid_line_chart" data-url=""></canvas>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-    <script>
-
-        $(function () {
-            var covidLineChart = $("#covid_line_chart");
-            $.ajax({
-                url : "http://127.0.0.1:8000/visual/covid_line_chart/",
-                success: function (data) {
-                    var ctx = covidLineChart[0].getContext("2d");
-
-                    new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                            labels: data.labels,
-                            datasets: [{
-                                label: 'Covid Death Case',
-                                fill: false,
-                                backgroundColor: ['orange', 'blue', 'green', 'red', 'violet', 'purple'],
-                                data: data.data
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            legend: {
-                                position: 'top',
-                            },
-                            title: {
-                                display: true,
-                                text: 'COVID19 Death Case Line Chart'
-                            },
-                        }
-                    });
-                }
-            });
-        });
-
-    </script>
-
-{% endblock %}
+{% endblock content_table %}
