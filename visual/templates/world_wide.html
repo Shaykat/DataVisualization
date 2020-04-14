@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+    <!-- Resources -->
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- HTML -->
+    <div class="content-wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <!-- Main row -->
+                <div class="row" style="margin-top:50px; margin-left:20px;">
+                    <!-- Left col -->
+                    <section class="col-lg-10 connectedSortable" style="margin-top:20px; margin-left:100px;">
+                        <!-- Custom tabs (Charts with tabs)-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 style="text-align: center; margin-right: 100px; color: #07B08E"> COVID19 WORLD WIDE DATA</h2>
+                                <div class="tab-content p-0" style="margin-left:10px;">
+                                    <input type="hidden"  id="stock" value="{{observation_list}}">
+                                    <div id="chartdiv"></div>
+                                </div>
+                            </div><!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        am4core.ready(function() {
+
+            // Themes begin
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+
+            // Create chart instance
+            var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+            // Add data
+            var chartData = JSON.parse(document.getElementById("stock").value);
+            console.log(chartData)
+            chart.data = chartData
+
+           // Create axes
+            var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+            categoryAxis.dataFields.category = "country";
+            categoryAxis.renderer.grid.template.location = 0;
+
+
+            var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+            valueAxis.renderer.inside = true;
+            valueAxis.renderer.labels.template.disabled = true;
+            valueAxis.min = 0;
+
+            // Create series
+            function createSeries(field, name) {
+
+                // Set up series
+                var series = chart.series.push(new am4charts.ColumnSeries());
+                series.name = name;
+                series.dataFields.valueY = field;
+                series.dataFields.categoryX = "country";
+                series.sequencedInterpolation = true;
+
+                // Make it stacked
+                series.stacked = true;
+
+                // Configure columns
+                series.columns.template.width = am4core.percent(30);
+                series.columns.template.tooltipText = "[bold]{name}[/]\n[font-size:14px]{categoryX}: {valueY}";
+
+                // Add label
+                var labelBullet = series.bullets.push(new am4charts.LabelBullet());
+                labelBullet.label.text = "{valueY}";
+                labelBullet.locationY = 0.5;
+                labelBullet.label.hideOversized = true;
+
+                return series;
+            }
+
+            createSeries("confirmed_cases", "confirmed");
+            createSeries("recovered_cases", "Recovered");
+            createSeries("death_cases", "Death");
+
+            // Legend
+            chart.legend = new am4charts.Legend();
+
+        }); // end am4core.ready()
+    </script>
+
+{% endblock %}
+

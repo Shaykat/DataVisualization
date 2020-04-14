@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+    <!-- Resources -->
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- HTML -->
+    <div class="content-wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <!-- Main row -->
+                <div class="row" style="margin-top:50px; margin-left:20px;">
+                    <!-- Left col -->
+                    <section class="col-lg-10 connectedSortable" style="margin-top:20px; margin-left:100px;">
+                        <!-- Custom tabs (Charts with tabs)-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 style="text-align: center; margin-right: 100px; color: #07B08E"> COVID19 WORLD WIDE DATA</h2>
+                                <div class="tab-content p-0" style="margin-left:10px;">
+                                    <input type="hidden"  id="stock" value="{{observation_list}}">
+                                    <div id="chartdiv"></div>
+                                </div>
+                            </div><!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Styles -->
+
+    <!-- Chart code -->
+    <script>
+        am4core.ready(function() {
+
+            // Themes begin
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+
+            var chart = am4core.create("chartdiv", am4charts.XYChart);
+            var chartData = JSON.parse(document.getElementById("stock").value);
+            {#console.log(chartData)#}
+            chart.data = chartData
+
+            var data = [];
+            var value = 50;
+            for(var i = 0; i < 300; i++){
+                var date = new Date();
+                date.setHours(0,0,0,0);
+                date.setDate(i);
+                value -= Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
+                data.push({date:date, value: value});
+            }
+
+            chart.data = data;
+
+            // Create axes
+            var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+            dateAxis.renderer.minGridDistance = 60;
+
+            var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+            // Create series
+            var series = chart.series.push(new am4charts.LineSeries());
+            series.dataFields.valueY = "value";
+            series.dataFields.dateX = "date";
+            series.tooltipText = "{value}"
+
+            series.tooltip.pointerOrientation = "vertical";
+
+            chart.cursor = new am4charts.XYCursor();
+            chart.cursor.snapToSeries = series;
+            chart.cursor.xAxis = dateAxis;
+
+            //chart.scrollbarY = new am4core.Scrollbar();
+            chart.scrollbarX = new am4core.Scrollbar();
+
+        }); // end am4core.ready()
+    </script>
+
+{% endblock %}
+

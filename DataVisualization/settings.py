@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'user.apps.UserConfig',
     'visual.apps.VisualConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -121,4 +122,5 @@ IMPORT_EXPORT_USE_TRANSACTIONS = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "DataVisualization/static")
 STATIC_URL = '/static/'

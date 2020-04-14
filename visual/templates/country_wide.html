@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{#{% block sidenav %}#}
+{#    {% extends 'sidenav.html' %}#}
+{#{% endblock %}#}
+
+{% block content%}
+    <!-- Resources -->
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- HTML -->
+    <div class="content-wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <!-- Main row -->
+                <div class="row" style="margin-top:50px; margin-left:20px;">
+                    <!-- Left col -->
+                    <section class="col-lg-10 connectedSortable" style="margin-top:20px; margin-left:100px;">
+                        <!-- Custom tabs (Charts with tabs)-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 style="text-align: center; margin-right: 100px; color: #07B08E"> COVID19 COUNTRY WIDE DATA </h2>
+                                <div class="tab-content p-0" style="margin-left:10px;">
+                                    <input type="hidden"  id="stock" value="{{observation_list}}">
+                                    <div id="chartdiv"></div>
+                                </div>
+                            </div><!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        am4core.ready(function() {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        // Create chart instance
+        var chart = am4core.create("chartdiv", am4charts.XYChart3D);
+        var url_str = 'http://127.0.0.1:8000/visual/world_wide'
+
+        // Add data
+        {#chart.data = {{ observation_list }}#}
+        var chartData = JSON.parse(document.getElementById("stock").value);
+        {#console.log(chartData)#}
+        chart.data = chartData
+        {#$.ajax({#}
+        {#    url: url_str,#}
+        {#    success: function (data) {#}
+        {#        chart.data = JSON.parse(data)#}
+        {#    }#}
+        {# });#}
+        // Create axes
+        let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "province";
+        categoryAxis.renderer.labels.template.rotation = 270;
+        categoryAxis.renderer.labels.template.hideOversized = false;
+        categoryAxis.renderer.minGridDistance = 20;
+        categoryAxis.renderer.labels.template.horizontalCenter = "right";
+        categoryAxis.renderer.labels.template.verticalCenter = "middle";
+        categoryAxis.tooltip.label.rotation = 270;
+        categoryAxis.tooltip.label.horizontalCenter = "right";
+        categoryAxis.tooltip.label.verticalCenter = "middle";
+
+        let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.title.text = "Confirmed Cases";
+        valueAxis.title.fontWeight = "bold";
+
+        // Create series
+        var series = chart.series.push(new am4charts.ColumnSeries3D());
+        series.dataFields.valueY = "cases";
+        series.dataFields.categoryX = "province";
+        series.name = "cases";
+        series.tooltipText = "{categoryX}: [bold]{valueY}[/]";
+        series.columns.template.fillOpacity = .8;
+
+        var columnTemplate = series.columns.template;
+        columnTemplate.strokeWidth = 2;
+        columnTemplate.strokeOpacity = 1;
+        columnTemplate.stroke = am4core.color("#FFFFFF");
+
+        columnTemplate.adapter.add("fill", function(fill, target) {
+          return chart.colors.getIndex(target.dataItem.index);
+        })
+
+        columnTemplate.adapter.add("stroke", function(stroke, target) {
+          return chart.colors.getIndex(target.dataItem.index);
+        })
+
+        chart.cursor = new am4charts.XYCursor();
+        chart.cursor.lineX.strokeOpacity = 0;
+        chart.cursor.lineY.strokeOpacity = 0;
+
+        }); // end am4core.ready()
+    </script>
+
+{% endblock %}
+

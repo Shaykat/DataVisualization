@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block Main_Body %}
+<div style="display:flex; justify-content:space-between; padding:50px 80px; padding-left: 430px; padding-top: 150px;">
+    <div style="background-color: #fff; flex-basis: 60%; border-radius: 5px; box-shadow: 0px 0px 10px #cac6c6; padding: 30px; margin-top:auto;
+    margin-bottom:auto;
+    text-align:center;">
+        <div class="container-fluid" style="margin-left: 127px;">
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Upload Data</h1>
+            </div>
+            <!--{{items}} -->
+
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-row">
+                {% for field in form %}
+                    <div class="col-md-4 mb-3">
+                        {{ field.errors }}
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                </div>
+                <button type="submit" class="dropbtn" style="
+                    background-color: #09B08E;
+                    color: white;
+                    padding: 6px 25px;
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    margin-left: -364px;">Upload
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -10,3 +10,33 @@
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
     <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
 {% endfor %}
+
+
+{#{% if observation_list %}#}
+{#    <!-- Content -->#}
+{#    {% block table %}#}
+{#        <h2> COVID19 Confirmed Cases</h2>#}
+{#        <table>#}
+{#            <thead {{ table.attrs.thead.as_html }}>#}
+{#                <tr>#}
+{#                    <th> Country</th>#}
+{#                    <th> Province </th>#}
+{#                    <th> Confirmed Case </th>#}
+{#                    <th> Death Case </th>#}
+{#                </tr>#}
+{#            </thead>#}
+{#            <tbody {{ table.attrs.tbody.as_html }}>#}
+{#            {% for observation in observation_list %}#}
+{#                <tr {{ row.attrs.as_html }}>#}
+{#                    {% for k, v in observation.items%}#}
+{#                        <td {{ column.attrs.td.as_html }}>{{v}}</td>#}
+{#                    {% endfor %}#}
+{#                </tr>#}
+{#            {% endfor %}#}
+{#            </tbody>#}
+{#        </table>#}
+{#    {% endblock table %}#}
+{##}
+{#{% else %}#}
+{#    <p>No observations are available.</p>#}
+{#{% endif %}#}
