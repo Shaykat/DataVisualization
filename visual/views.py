@@ -94,13 +94,18 @@ def time_line(request):
     template = loader.get_template('./time_line.html')
     context_object_name = 'observation_list'
     search_query = ""
+    days = 0
     data = []
 
     if request.method == 'GET':
         search_query = request.GET.get('country', None)
+        days = int(request.GET.get('days', 0))
     queryset = get_queryset(search_query, 'timeline')
+    if days:
+        template = loader.get_template('./last_30_days.html')
+        queryset = queryset[:days]
 
-    for entry in queryset.order_by('-country_confirmed_case')[:]:
+    for entry in queryset:
         data.append({
             'observation_date': str(entry['observation_date']),
             'confirmed_cases': entry['country_confirmed_case'],
@@ -116,6 +121,47 @@ def time_line(request):
         return JsonResponse(data=context, safe=False)
 
     return HttpResponse(template.render(context, request))
+
+
+def get_queryset(search_query, group_by):
+    if group_by == 'province':
+        if search_query:
+            queryset = CovidObservation.objects.values('country_id', 'province_id', 'observation_date').annotate(
+                Province_confirmed_case=Sum('confirmed_case'),
+                Province_death_case=Sum('death_case'),
+                Province_recovered_case=Sum('recovered_case')).filter(
+                country_id=search_query).order_by('-Province_confirmed_case')
+        else:
+            queryset = CovidObservation.objects.values('country_id', 'province_id', 'observation_date').annotate(
+                Province_confirmed_case=Sum('confirmed_case'),
+                Province_death_case=Sum('death_case'),
+                Province_recovered_case=Sum('recovered_case')).order_by('-Province_confirmed_case')
+    elif group_by == 'country':
+        if search_query:
+            queryset = CovidObservation.objects.values('country_id', 'observation_date').annotate(
+                country_confirmed_case=Sum('confirmed_case'),
+                country_death_case=Sum('death_case'),
+                country_recovered_case=Sum('recovered_case')).filter(
+                country_id=search_query).order_by('-country_confirmed_case')
+        else:
+            queryset = CovidObservation.objects.values('country_id', 'observation_date').annotate(
+                country_confirmed_case=Sum('confirmed_case'),
+                country_death_case=Sum('death_case'),
+                country_recovered_case=Sum('recovered_case')).order_by('-country_confirmed_case')
+    else:
+        if search_query:
+            queryset = CovidObservation.objects.values('country_id', 'observation_date').annotate(
+                country_confirmed_case=Sum('confirmed_case'),
+                country_death_case=Sum('death_case'),
+                country_recovered_case=Sum('recovered_case')).filter(
+                country_id=search_query).order_by('-observation_date')
+        else:
+            queryset = CovidObservation.objects.values('observation_date').annotate(
+                country_confirmed_case=Sum('confirmed_case'),
+                country_death_case=Sum('death_case'),
+                country_recovered_case=Sum('recovered_case')).order_by('-observation_date')
+    return queryset
+
 
 def covid_chart(request):
     labels = []
@@ -156,44 +202,4 @@ def covid_line_chart(request):
         'labels': labels,
         'data': data,
     })
-
-
-def get_queryset(search_query, group_by):
-    if group_by == 'province':
-        if search_query:
-            queryset = CovidObservation.objects.values('country_id', 'province_id', 'observation_date').annotate(
-                Province_confirmed_case=Sum('confirmed_case'),
-                Province_death_case=Sum('death_case'),
-                Province_recovered_case=Sum('recovered_case')).filter(
-                country_id=search_query).order_by('-Province_confirmed_case')
-        else:
-            queryset = CovidObservation.objects.values('country_id', 'province_id', 'observation_date').annotate(
-                Province_confirmed_case=Sum('confirmed_case'),
-                Province_death_case=Sum('death_case'),
-                Province_recovered_case=Sum('recovered_case')).order_by('-Province_confirmed_case')
-    elif group_by == 'country':
-        if search_query:
-            queryset = CovidObservation.objects.values('country_id', 'observation_date').annotate(
-                country_confirmed_case=Sum('confirmed_case'),
-                country_death_case=Sum('death_case'),
-                country_recovered_case=Sum('recovered_case')).filter(
-                country_id=search_query).order_by('-country_confirmed_case')
-        else:
-            queryset = CovidObservation.objects.values('country_id', 'observation_date').annotate(
-                country_confirmed_case=Sum('confirmed_case'),
-                country_death_case=Sum('death_case'),
-                country_recovered_case=Sum('recovered_case')).order_by('-country_confirmed_case')
-    else:
-        if search_query:
-            queryset = CovidObservation.objects.values('country_id', 'observation_date').annotate(
-                country_confirmed_case=Sum('confirmed_case'),
-                country_death_case=Sum('death_case'),
-                country_recovered_case=Sum('recovered_case')).filter(
-                country_id=search_query).order_by('-country_confirmed_case')
-        else:
-            queryset = CovidObservation.objects.values('observation_date').annotate(
-                country_confirmed_case=Sum('confirmed_case'),
-                country_death_case=Sum('death_case'),
-                country_recovered_case=Sum('recovered_case')).order_by('-country_confirmed_case')
-    return queryset
 
