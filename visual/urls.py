@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+"""Url mapping with the view methods for visual app"""
 app_name = 'visual'
 urlpatterns = [
     # path('', views.IndexView.as_view(), name='index'),

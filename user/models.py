@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 USER_TYPE = (
-    (1, 'Student'),
-    (2, 'Teacher'),
+    (1, 'User'),
+    (2, 'Admin'),
 )
 
 
