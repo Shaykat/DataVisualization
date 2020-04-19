@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataVisualization/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataVisualization/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visual/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/visual/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visual/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/visual/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,14 +273,14 @@
     <state x="288" y="119" width="1032" height="568" key="#xdebugger.evaluate/0.23.1680.967@0.23.1680.967" timestamp="1586778957128" />
     <state x="669" y="371" width="708" height="568" key="#xdebugger.evaluate/0.23.1680.974@0.23.1680.974" timestamp="1586596342767" />
     <state x="669" y="371" width="740" height="568" key="#xdebugger.evaluate/0.23.1680.975@0.23.1680.975" timestamp="1586597323901" />
-    <state x="453" y="59" key="CommitChangelistDialog2" timestamp="1587262806726">
+    <state x="453" y="59" key="CommitChangelistDialog2" timestamp="1587289040691">
       <screen x="0" y="23" width="1680" height="967" />
     </state>
     <state x="1964" y="126" key="CommitChangelistDialog2/0.23.1440.822/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584489287764" />
     <state x="393" y="54" key="CommitChangelistDialog2/0.23.1440.826@0.23.1440.826" timestamp="1584833906416" />
     <state x="1964" y="119" key="CommitChangelistDialog2/0.23.1440.877/1440.23.1920.988@1440.23.1920.988" timestamp="1582794505857" />
     <state x="453" y="59" key="CommitChangelistDialog2/0.23.1680.966@0.23.1680.966" timestamp="1586882976440" />
-    <state x="453" y="59" key="CommitChangelistDialog2/0.23.1680.967@0.23.1680.967" timestamp="1587262806726" />
+    <state x="453" y="59" key="CommitChangelistDialog2/0.23.1680.967@0.23.1680.967" timestamp="1587289040691" />
     <state x="205" y="59" key="DiffContextDialog" timestamp="1587262784029">
       <screen x="0" y="23" width="1680" height="967" />
     </state>
@@ -473,14 +466,14 @@
     </state>
     <state x="1909" y="190" key="SettingsEditor/0.23.1440.822/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584434900857" />
     <state x="1909" y="190" key="SettingsEditor/0.23.1440.823/1440.23.1920.1057@1440.23.1920.1057" timestamp="1582783985452" />
-    <state x="490" y="241" key="Vcs.Push.Dialog.v2" timestamp="1586885000192">
-      <screen x="0" y="23" width="1680" height="966" />
+    <state x="490" y="241" key="Vcs.Push.Dialog.v2" timestamp="1587289059252">
+      <screen x="0" y="23" width="1680" height="967" />
     </state>
     <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.23.1440.822/1440.23.1920.1057@1440.23.1920.1057" timestamp="1584489289921" />
     <state x="420" y="209" key="Vcs.Push.Dialog.v2/0.23.1440.826@0.23.1440.826" timestamp="1584833908834" />
     <state x="2000" y="245" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.23.1920.988@1440.23.1920.988" timestamp="1582794508749" />
     <state x="490" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.966@0.23.1680.966" timestamp="1586885000192" />
-    <state x="490" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1586861351287" />
+    <state x="490" y="241" key="Vcs.Push.Dialog.v2/0.23.1680.967@0.23.1680.967" timestamp="1587289059252" />
     <state width="720" height="444" key="XDebugger.FullValuePopup" timestamp="1586778954080">
       <screen x="0" y="23" width="1680" height="967" />
     </state>
@@ -519,16 +512,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/visual/urls.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/visual/urls.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/user/views.py</url>
           <line>63</line>
