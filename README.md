@@ -1,7 +1,7 @@
 # Visualization of COVID-19 Breakout Around The World
-```
+
 This Application can be run in Linux, Windows and Mac OS. We developed this project in Mac OS and also deployed it on a Linux server. It will perform better in the Linux environment.
-``` 
+
 
 # Configuration For Linux:
 First download the necessary packages: 
