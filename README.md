@@ -3,9 +3,9 @@ This Application can be run in Linux, Windows and Mac OS. We developed this proj
 
 # Configuration For Linux:
 # First download the necessary packages: 
-sudo add-apt-repository ppa:jonathonf/python-3.6 
+```sudo add-apt-repository ppa:jonathonf/python-3.6 
 sudo apt-get update 
-sudo apt-get install python3.6 python-pip python-dev libpq-dev
+sudo apt-get install python3.6 python-pip python-dev libpq-dev```
 
 # Create Virtual Environment
 # Update pip and install virtual environment:
