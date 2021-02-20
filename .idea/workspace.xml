@@ -20,9 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DataVisualization.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DataVisualization.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -258,6 +255,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -301,14 +301,14 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1418" height="208" key="GridCell.Tab.0.right/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822145133" />
-    <state x="427" y="43" key="SettingsEditor" timestamp="1613821154194">
+    <state x="427" y="43" key="SettingsEditor" timestamp="1613822495612">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="427" y="43" key="SettingsEditor/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613821154194" />
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1613822273973">
+    <state x="427" y="43" key="SettingsEditor/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822495612" />
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1613822342439">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822273973" />
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822342439" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
