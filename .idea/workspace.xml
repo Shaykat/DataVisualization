@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/DataVisualization.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DataVisualization.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/req_lib.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +64,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="JupyterTrust" id="c45cc68c-632a-4895-9c97-fc50b2f75814" />
   <component name="ProjectId" id="1YNWP5AecDjdKe2KuJMRlVhdChA" />
@@ -226,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587262806956</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[DATA VISUALIZATION] requirements.txt file added">
+      <created>1613821251222</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613821251222</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,33 +277,38 @@
     <MESSAGE value="[VISUAL] Second Version of the Covid 19 Visualization" />
     <MESSAGE value="[VISUAL] Fix issue of not getting table" />
     <MESSAGE value="[VISUAL] Code Modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="[VISUAL] Code Modification" />
+    <MESSAGE value="[DATA VISUALIZATION] requirements.txt file added" />
+    <option name="LAST_COMMIT_MESSAGE" value="[DATA VISUALIZATION] requirements.txt file added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="91" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613819864015">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="184" y="91" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613819864015" />
-    <state width="1419" height="208" key="GridCell.Tab.0.bottom" timestamp="1613819942807">
+    <state width="1418" height="208" key="GridCell.Tab.0.bottom" timestamp="1613822145133">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613819942807" />
-    <state width="1419" height="208" key="GridCell.Tab.0.center" timestamp="1613819942806">
+    <state width="1418" height="208" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822145133" />
+    <state width="1418" height="208" key="GridCell.Tab.0.center" timestamp="1613822145132">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.center/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613819942806" />
-    <state width="1419" height="208" key="GridCell.Tab.0.left" timestamp="1613819942806">
+    <state width="1418" height="208" key="GridCell.Tab.0.center/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822145132" />
+    <state width="1418" height="208" key="GridCell.Tab.0.left" timestamp="1613822145131">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.left/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613819942806" />
-    <state width="1419" height="208" key="GridCell.Tab.0.right" timestamp="1613819942807">
+    <state width="1418" height="208" key="GridCell.Tab.0.left/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822145131" />
+    <state width="1418" height="208" key="GridCell.Tab.0.right" timestamp="1613822145133">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1419" height="208" key="GridCell.Tab.0.right/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613819942807" />
+    <state width="1418" height="208" key="GridCell.Tab.0.right/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822145133" />
     <state x="427" y="43" key="SettingsEditor" timestamp="1613821154194">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="427" y="43" key="SettingsEditor/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613821154194" />
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1613822273973">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822273973" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
