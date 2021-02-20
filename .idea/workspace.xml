@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="">
+    <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="[DATA VISUALIZATION] requirements.txt file updated 2">
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -249,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613821251222</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[DATA VISUALIZATION] requirements.txt file updated 2">
+      <created>1613822525709</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613822525709</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +285,8 @@
     <MESSAGE value="[VISUAL] Fix issue of not getting table" />
     <MESSAGE value="[VISUAL] Code Modification" />
     <MESSAGE value="[DATA VISUALIZATION] requirements.txt file added" />
-    <option name="LAST_COMMIT_MESSAGE" value="[DATA VISUALIZATION] requirements.txt file added" />
+    <MESSAGE value="[DATA VISUALIZATION] requirements.txt file updated 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="[DATA VISUALIZATION] requirements.txt file updated 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="91" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613819864015">
@@ -305,10 +313,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="427" y="43" key="SettingsEditor/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822495612" />
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1613822342439">
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1613822527496">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822342439" />
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822527496" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
