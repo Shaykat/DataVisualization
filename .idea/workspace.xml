@@ -19,8 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="[DATA VISUALIZATION] requirements.txt file updated 2">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="[DATA VISUALIZATION] requirements.txt file updated 3">
+      <change afterPath="$PROJECT_DIR$/images/chart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/country.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/last30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/scw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/timeline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/world.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project-overview.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visual/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visual/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/visual/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +63,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -80,7 +91,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -91,19 +102,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/visual/css" />
-      <recent name="$PROJECT_DIR$/visual/static/visual" />
-      <recent name="$PROJECT_DIR$/visual/static/images" />
-      <recent name="$PROJECT_DIR$/static/images" />
-      <recent name="$PROJECT_DIR$/static/visual" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/visual/images" />
       <recent name="$PROJECT_DIR$/visual/templates" />
       <recent name="$PROJECT_DIR$/visual" />
       <recent name="$PROJECT_DIR$/visual/static/visual/css" />
       <recent name="$PROJECT_DIR$/visual/static/visual" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/static/visual/css" />
+      <recent name="$PROJECT_DIR$/visual/static/visual" />
+      <recent name="$PROJECT_DIR$/visual/static/images" />
+      <recent name="$PROJECT_DIR$/static/images" />
     </key>
   </component>
   <component name="RunManager" selected="Python.run">
@@ -256,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613822525709</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[DATA VISUALIZATION] requirements.txt file updated 3">
+      <created>1613822618128</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613822618128</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,37 +304,38 @@
     <MESSAGE value="[VISUAL] Code Modification" />
     <MESSAGE value="[DATA VISUALIZATION] requirements.txt file added" />
     <MESSAGE value="[DATA VISUALIZATION] requirements.txt file updated 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="[DATA VISUALIZATION] requirements.txt file updated 2" />
+    <MESSAGE value="[DATA VISUALIZATION] requirements.txt file updated 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="[DATA VISUALIZATION] requirements.txt file updated 3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="91" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613819864015">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="184" y="91" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613819864015" />
-    <state width="1418" height="208" key="GridCell.Tab.0.bottom" timestamp="1613822145133">
+    <state width="1418" height="208" key="GridCell.Tab.0.bottom" timestamp="1613823204523">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1418" height="208" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822145133" />
-    <state width="1418" height="208" key="GridCell.Tab.0.center" timestamp="1613822145132">
+    <state width="1418" height="208" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613823204523" />
+    <state width="1418" height="208" key="GridCell.Tab.0.center" timestamp="1613823204521">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1418" height="208" key="GridCell.Tab.0.center/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822145132" />
-    <state width="1418" height="208" key="GridCell.Tab.0.left" timestamp="1613822145131">
+    <state width="1418" height="208" key="GridCell.Tab.0.center/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613823204521" />
+    <state width="1418" height="208" key="GridCell.Tab.0.left" timestamp="1613823204520">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1418" height="208" key="GridCell.Tab.0.left/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822145131" />
-    <state width="1418" height="208" key="GridCell.Tab.0.right" timestamp="1613822145133">
+    <state width="1418" height="208" key="GridCell.Tab.0.left/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613823204520" />
+    <state width="1418" height="208" key="GridCell.Tab.0.right" timestamp="1613823204522">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1418" height="208" key="GridCell.Tab.0.right/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822145133" />
+    <state width="1418" height="208" key="GridCell.Tab.0.right/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613823204522" />
     <state x="427" y="43" key="SettingsEditor" timestamp="1613822495612">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="427" y="43" key="SettingsEditor/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822495612" />
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1613822527496">
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1613822619771">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822527496" />
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822619771" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
