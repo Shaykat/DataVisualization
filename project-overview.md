@@ -5,7 +5,7 @@ COVID  -19  a  virus  of  the  same  group  as  SERS,MERS   and   the   destroye
 It   hasalready been spread throughout the world and this situation hasalready  been  declared  as  pandemic.  This  virus  
 spread  throughaffected  people’s  droplets,  and  any  kind  of  close  contact.  Sothis  is  very  much  important  to  
 make  people  aware  about  thispandemic  and  day  to  day  information  so  that  they  can  makethem   safe   theirself.   
-It   is   the   motive   to   make   a   meaningfulvisualization  of  this  pandemic  through  different  charts,  graphsand  
+It   is   the   motive   to   make   a   meaningful visualization  of  this  pandemic  through  different  charts,  graphsand  
 tables  and  timeline  through  a  website.  Where  people  canfind  information  about  daily  as  well  as  monthly  new,  
 recoveredand death cases throughout the world and for specific countries.Apart  from  that  users  of  the  site  can  sign  
 up  to  this  systemand  contribute  though  data  by  uploading  CSV  files.  To  developthis   application   we   chose   
