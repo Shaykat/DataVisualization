@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="[DATA VISUALIZATION] New Branch for production">
+    <list default="true" id="56187f29-b9f1-494a-90b7-c743ed6f1bfd" name="Default Changelist" comment="[DATA VISUALIZATION] update the settings file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataVisualization/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataVisualization/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620641349548</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[DATA VISUALIZATION] update the settings file">
+      <created>1620641963543</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1620641963543</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,38 +317,51 @@
     <MESSAGE value="[DATA VISUALIZATION] requirements.txt file updated 3" />
     <MESSAGE value="[DATA VISUALIZATION] project report updated" />
     <MESSAGE value="[DATA VISUALIZATION] New Branch for production" />
-    <option name="LAST_COMMIT_MESSAGE" value="[DATA VISUALIZATION] New Branch for production" />
+    <MESSAGE value="[DATA VISUALIZATION] update the settings file" />
+    <option name="LAST_COMMIT_MESSAGE" value="[DATA VISUALIZATION] update the settings file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="91" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613819864015">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="184" y="91" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613819864015" />
-    <state width="1418" height="208" key="GridCell.Tab.0.bottom" timestamp="1613823204523">
-      <screen x="0" y="25" width="1440" height="875" />
+    <state x="144" y="93" key="DiffContextDialog" timestamp="1620643995176">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
+    <state x="144" y="93" key="DiffContextDialog/0.25.1440.814/1440.25.1920.1055@0.25.1440.814" timestamp="1620643995176" />
+    <state width="1418" height="208" key="GridCell.Tab.0.bottom" timestamp="1620642011327">
+      <screen x="0" y="25" width="1440" height="814" />
+    </state>
+    <state width="1418" height="208" key="GridCell.Tab.0.bottom/0.25.1440.814/1440.25.1920.1055@0.25.1440.814" timestamp="1620642011327" />
     <state width="1418" height="208" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613823204523" />
-    <state width="1418" height="208" key="GridCell.Tab.0.center" timestamp="1613823204521">
-      <screen x="0" y="25" width="1440" height="875" />
+    <state width="1418" height="208" key="GridCell.Tab.0.center" timestamp="1620642011326">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
+    <state width="1418" height="208" key="GridCell.Tab.0.center/0.25.1440.814/1440.25.1920.1055@0.25.1440.814" timestamp="1620642011326" />
     <state width="1418" height="208" key="GridCell.Tab.0.center/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613823204521" />
-    <state width="1418" height="208" key="GridCell.Tab.0.left" timestamp="1613823204520">
-      <screen x="0" y="25" width="1440" height="875" />
+    <state width="1418" height="208" key="GridCell.Tab.0.left" timestamp="1620642011324">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
+    <state width="1418" height="208" key="GridCell.Tab.0.left/0.25.1440.814/1440.25.1920.1055@0.25.1440.814" timestamp="1620642011324" />
     <state width="1418" height="208" key="GridCell.Tab.0.left/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613823204520" />
-    <state width="1418" height="208" key="GridCell.Tab.0.right" timestamp="1613823204522">
-      <screen x="0" y="25" width="1440" height="875" />
+    <state width="1418" height="208" key="GridCell.Tab.0.right" timestamp="1620642011326">
+      <screen x="0" y="25" width="1440" height="814" />
     </state>
+    <state width="1418" height="208" key="GridCell.Tab.0.right/0.25.1440.814/1440.25.1920.1055@0.25.1440.814" timestamp="1620642011326" />
     <state width="1418" height="208" key="GridCell.Tab.0.right/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613823204522" />
     <state x="427" y="43" key="SettingsEditor" timestamp="1613822495612">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="427" y="43" key="SettingsEditor/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1613822495612" />
-    <state x="320" y="159" key="Vcs.Push.Dialog.v2" timestamp="1620641351648">
+    <state x="320" y="159" key="Vcs.Push.Dialog.v2" timestamp="1620641966176">
       <screen x="0" y="25" width="1440" height="814" />
     </state>
-    <state x="320" y="159" key="Vcs.Push.Dialog.v2/0.25.1440.814/1440.25.1920.1055@0.25.1440.814" timestamp="1620641351648" />
+    <state x="320" y="159" key="Vcs.Push.Dialog.v2/0.25.1440.814/1440.25.1920.1055@0.25.1440.814" timestamp="1620641966176" />
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.25.1920.994@0.25.1440.875" timestamp="1618560786559" />
+    <state x="412" y="149" key="git4idea.branch.GitSmartOperationDialog" timestamp="1620643998262">
+      <screen x="0" y="25" width="1440" height="814" />
+    </state>
+    <state x="412" y="149" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.814/1440.25.1920.1055@0.25.1440.814" timestamp="1620643998262" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
