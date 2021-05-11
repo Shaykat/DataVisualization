@@ -11,7 +11,6 @@ def latest_date_check(start_date, end_date):
 
 
 class CovidObservationModelTests(TestCase):
-
     def test_latest_observation_date(self):
         latest_date = CovidObservation.objects.latest('observation_date').observation_date
         date = datetime.today()
