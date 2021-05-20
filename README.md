@@ -1,6 +1,6 @@
 # Visualization of COVID-19 Breakout Around The World
 
-Here is the Application Link: http://ec2-54-197-27-175.compute-1.amazonaws.com/visual/world_wide/
+Here is the Application Link: http://ec2-54-197-27-175.compute-1.amazonaws.com/
 
 This Application can be run in Linux, Windows and Mac OS. We developed this project in Mac OS and also deployed it on a Linux server. It will perform better in the Linux environment.
 
