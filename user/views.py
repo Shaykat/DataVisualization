@@ -81,7 +81,7 @@ def upload_data(request):
                 country_id=country[i] if country[i] else "",
             ))
         CovidObservation.objects.bulk_create(objs)
-        return redirect('http://127.0.0.1:8000/visual')
+        return redirect('/')
     else:
         form = UploadForm()
         return render(request, 'upload_data.html', {'form': form})

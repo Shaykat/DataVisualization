@@ -45,7 +45,7 @@
 
         // Create chart instance
         var chart = am4core.create("chartdiv", am4charts.XYChart3D);
-        var url_str = 'http://127.0.0.1:8000/visual/world_wide'
+        var url_str = '/visual/world_wide'
 
         // Add data
         {#chart.data = {{ observation_list }}#}
